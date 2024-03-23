@@ -1,0 +1,64 @@
+apply plugin:  'com.android.application'
+// 这个插件必须在 apply plugin: 'com.android.application' 的下面, 在其他插件的前面!!!!!!
+//apply plugin: 'com.xiaojinzi.component.plugin'
+
+
+android {
+    namespace 'com.qiu.testcomponent_fir'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.qiu.testcomponent_fir"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                // 配置业务模块的模块名称
+                arguments += [
+                        "HOST"     : project.getName(),
+                        "Priority" : "0", // 这个字符串内必须是数字类型的. 表示模块的优先级, 值越大, 越先加载
+                ]
+            }
+        }
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    // -------------------------------------- 基础版本 --------------------------------------
+    api 'com.github.xiaojinzi123.Component:component-impl:1.9.4'
+    annotationProcessor "com.github.xiaojinzi123.Component:component-compiler:1.9.4"
+
+
+    implementation(project(':module1'))
+    implementation(project(':paymodule'))
+
+
+}

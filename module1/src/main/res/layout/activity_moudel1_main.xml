@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Module1_MainActivity">
+
+
+    <TextView
+        android:id="@+id/text_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="我是 module1 页面 main activiy"
+        android:textSize="24sp"></TextView>
+
+
+    <Button
+
+        android:id="@+id/btn_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="GoMain"
+        android:text="返回主页面 app main"></Button>
+
+
+</LinearLayout>

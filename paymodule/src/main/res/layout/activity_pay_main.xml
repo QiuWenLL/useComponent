@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PayMainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="我是 支付页面 main activiy"
+        android:textSize="24sp"></TextView>
+
+    <Button
+        android:id="@+id/sec_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="GoMain"
+        android:text="返回 app main "
+        android:textSize="24sp"></Button>
+
+    <Button
+        android:id="@+id/sec_btn_go_module"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="GoModuleMain"
+        android:text="跳转到 module 主页面"
+        android:textSize="24sp" />
+
+</LinearLayout>
