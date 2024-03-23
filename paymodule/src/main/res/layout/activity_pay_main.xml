@@ -25,12 +25,20 @@
         android:textSize="24sp"></Button>
 
     <Button
-        android:id="@+id/sec_btn_go_module"
+        android:id="@+id/sec_btn_go_info_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:onClick="GoModuleMain"
         android:text="跳转到 module 主页面"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="GoPay_Fragment_info"
+        android:text="跳转到 支付 详情页面 fragment"
         android:textSize="24sp" />
 
 </LinearLayout>

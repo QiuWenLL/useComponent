@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/sec_btn_go_module"
+        android:id="@+id/sec_btn_go_info_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -27,7 +27,7 @@
         android:onClick="GoModuleMain"
         android:text="跳转到  module 页面"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sec_btn_go_module" />
+        app:layout_constraintTop_toBottomOf="@+id/sec_btn_go_info_fragment" />
 
     <Button
         android:id="@+id/button2"

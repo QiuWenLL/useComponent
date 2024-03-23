@@ -49,4 +49,18 @@ public class PayMainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     *
+     * 跳转到 fragment info
+     *
+     * @param view
+     */
+    public void GoPay_Fragment_info(View view){
+        Router.with(this)
+                .host("paymodule")
+                .path("paymodule/fragment_info")
+                .navigate();
+    }
+
+
 }
